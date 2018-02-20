@@ -1,6 +1,6 @@
 <?php
 
-namespace dastanaron;
+namespace dastanaron\extension;
 
 /**
  * Class DateDictionary
