@@ -1,5 +1,11 @@
 <?php
-require 'DateDictionary.php';
+require 'RuDate.php';
+
+use dastanaron\RuDate;
+
+$date = RuDate::init('2018-10-18 19:43');
+
+var_dump($date->format('l, d F Y M D'));
 
 
 
