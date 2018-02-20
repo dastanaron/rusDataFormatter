@@ -4,35 +4,10 @@ namespace dastanaron\ruDate;
 
 /**
  * Class DateDictionary
- *
- * Класс русскоязычных форматов дат.
- *
- * Все даты в русскоязычных форматах, будут обозначаться кириллицей, в ином случае, формат будет возвращен в соответствии со
- * спецификацией \DateTime->format() или функцией date()
- *
- * 0д - порядковый номер дня, с ведущим нулем
- * д - порядковый номер дня без ведущего нуля
- *
- * м - название месяца в им. падеже
- * -м - Короткое название месяца
- * М - название месяца в родительном падеже
- *
- * н - название дня недели в им. падеже
- * -н - короткое название недели
- *
- * г - год короткое написание (18)
- * Г - год полное написание (2018)
- *
- *
  * @package frontend\components
  */
-class DateDictionary
+class RuDate extends \DateTime
 {
-
-    /**
-     * @var \DateTime
-     */
-    public $date;
 
     /**
      * @var \stdClass
@@ -50,7 +25,7 @@ class DateDictionary
      */
     public function __construct($date)
     {
-        $this->date = new \DateTime($date);
+        parent::__construct($date);
 
         $this->object = new \stdClass();
 
@@ -60,10 +35,14 @@ class DateDictionary
         $this->object->year = (int) $this->date->format('Y');
     }
 
+    public function format($format)
+    {
+
+    }
+
     /**
-     * DateDictionary constructor static alternative
      * @param $date
-     * @return DateDictionary
+     * @return RuDate
      */
     public static function init($date)
     {
