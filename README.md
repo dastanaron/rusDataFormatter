@@ -14,6 +14,12 @@
 можно изучить в описании [\DateTime](http://php.net/manual/ru/class.datetime.php)
 
 
+Установка
+==============
+`composer require dastanaron/rudate` Можно добавить вторым аргументом "@dev", если будут проблемы с
+минимальной стабильной версией
+
+
 Как пользоваться
 ----------------------
 
@@ -28,9 +34,9 @@
 
 ```php
 <?php
-require 'RuDate.php';
+require 'vendor/autoload.php';
 
-use dastanaron\RuDate;
+use dastanaron\extension\RuDate;
 
 $date = RuDate::init('2018-10-18 19:43');
 
