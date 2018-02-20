@@ -1,0 +1,13 @@
+{
+  "name": "dastanaron/rudate",
+  "description": "Russian data formatter, extended \\DateTime",
+  "keywords": ["ru", "date formatter", "extends"],
+  "type": "extends",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/dastanaron/rusDataFormatter/issues"
+  },
+  "require": {
+    "php": ">=5.4.0"
+  }
+}
